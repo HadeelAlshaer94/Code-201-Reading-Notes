@@ -29,9 +29,9 @@ The ECMAScript standard does not include any input/output (I/O), such as network
 
 
 
-| Code 201 Reading Notes                                                             | Description |
-| -----------                                                                        | ----------- |
-| [Home Page](https://hadeelalshaer94.github.io/Code-201-Reading-Notes/README)      | Home Page         |
+| Code 201 Reading Notes                                                                      | Description |
+| -----------                                                                                 | ----------- |
+| [Home Page](https://hadeelalshaer94.github.io/Code-201-Reading-Notes/README)                | Home Page         |
 | [read01](https://hadeelalshaer94.github.io/Code-201-Reading-Notes/read01)                   | read01 Page       |
 | [read02](https://hadeelalshaer94.github.io/Code-201-Reading-Notes/read02)                   | read02 Page       |
 | [read03](https://hadeelalshaer94.github.io/Code-201-Reading-Notes/read03)                   | read03 Page       |
