@@ -1,6 +1,5 @@
-# Reading Nots
 ### Overview 
-
+###### This website includes a set of pages related to reading, so each page refers to an important term in the programming of websites.
 
 
 
