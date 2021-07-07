@@ -150,18 +150,6 @@ margin-top: 100px;}
 
 
 
-## Methods
-
-
-## Objects
-
-
-
-
-
-
-
-
 
 
 
