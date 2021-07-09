@@ -48,3 +48,130 @@ e 1 Rooms . text Content = hote 1 . checkAvai l abi lity();
 
 
 ## Document Object Model
+##### As a browser loads a web page, it creates a model of that page. The model is called a DOM tree, and it is stored in the browsers' memory. It consists of four main types of nodes.
+
+```html
+<html>
+<body>
+<di v id="page">
+<hl id="header">List</hl>
+<h2>Buy groceries</h2>
+<ul>
+<li id="one" class="hot"><em>fresh</em> figs</li>
+<li id="two" class="hot">pine nuts</l i>
+<l i id="three" class="hot">honey</l i>
+<l i id="four">balsamic vinegar</l i>
+</ ul>
+<script src="js/l i st. js "></scri pt>
+</ div>
+</ body>
+</ html>
+```
+
+### SELECTING ELEMENTS USING ID ATTRIBUTES
+##### get El ementByid () al lows you to select a single element node by specifying the value of its id attribute. This method has one parameter: the value of the id attribute on the element you want to select. This value is placed inside quote marks because it is a string. The quotes can be single or double quotes, but they must match. In the example on the left, the first line of JavaScript code finds the element whose id attribute has a value of one, and stores a reference to that node in a variable ca lled e 1. The code then uses a property called cl assName (which you meet on p232) to update the value of the cl ass attribute of the element stored in this variable. Its value is coo 1, and this triggers a new rule in the CSS that sets the background color of the element to aqua. Note how the c 1 assName property is used on the variable that stores the reference to the element. Browser Support: This is one of the oldest and best supported methods for accessing elements.
+
+
+## HTML:
+
+```html
+<hl id="header">List King<lhl>
+<h2>Buy groceries<lh2>
+<ul>
+<li id="one" class="hot"><em>fresh<lem>
+figs<lli>
+<li id="two" class="hot">pine nut s<lli>
+<li id="three" class="hot">honey<lli>
+<li id="four">balsamic vi negar<ll i>
+</ul>
+```
+
+## JavaScript
+```html
+II Select the element and store it in a variable.
+var el = document.getElementByid('one');
+II Change the value of the class attribute.
+el.className ='cool ' ;
+```
+
+### SELECTING ELEMENTS USING CLASS ATTRIBUTES
+##### The get El ementsByCl ass Name() method allows you to select elements whose c 1 ass attribute contains a specific va lue. The method has one parameter: the class name which is given in quotes within the parentheses after the method name. Because several elements can have the same value for their cl ass attribute, this method always returns a Nodelist.
+
+```html
+var elements = document .getEl ementsByClassName('hot'); II Find hot items
+if (e lements .l ength> 2) {
+var el = elements[2];
+el.className = 'cool';}
+```
+
+
+### SELECTING ELEMENTS BY TAG NAME
+##### The get El ementsByTagName () method allows you to select elements using their tag name. The element name is specified as a parameter, so it is placed inside the parentheses and is contained by quote marks. Note that you do not include the angled brackets that surround the tag name in the HTML (just the letters inside the brackets).
+
+
+```html
+var elements = document.getElementsByTagName('li '); /I Find <li> elements
+if (elements.length> O) {
+l;IJiliii
+var el = elements[O];
+el.className = 'cool';}
+```
+
+
+### SELECTING ELEMENTS USING CSS SELECTORS
+##### querySe 1 ector() returns the first element node that matches the CSS-style selector. querySe 1ectorA11 () returns a Nodelist of all of the matches. Both methods take a CSS selector as their only parameter. The CSS selector syntax offers more flexibility and accuracy when selecting an element than just specifying a class name or a tag name, and should also be familiar to front-end web developers who are used to targeting elements using CSS.
+
+```html
+II querySel ector() only retur ns the fi rst match
+var el = document .querySel ector('li .hot ' };
+el .cl assName = ' cool' ;
+II querySel ectorAll returns a Nodeli st
+just specifying a class name
+or a tag name, and should also
+be familiar to front-end web
+developers who are used to
+targeting elements using CSS.
+JAVASCRIPT
+II The second matching element (the t hird list item) is selected and changed
+var el s = document .querySelectorAll('li .hot') ;
+els[l] .className = ' cool' ;
+```
+
+
+## 1. WHEN THE PAGE FIRST LOADS
+
+```htmk
+<ul>
+<li id="one" class="hot">
+<em>fresh</em> figs</li>
+<li id="two" class="hot">pine nuts</li>
+<li id="three" cl ass="hot">honey</li>
+<li id="four">balsamic vinegar</li>
+</ul>
+```
+
+
+## 2. AFTER THE FIRST SET OF STATEMENTS
+
+```html
+<ul>
+<li id="one" class=" cool ">
+<em>fresh</em> figs</li>
+<li id="two" class="hot">pine nuts</li>
+<li id="three" class="hot">honey</l i>
+<li id="four">balsamic vinegar</li>
+</ul>
+```
+
+
+## 3. AFTER THE SECOND SET OF STATEMENTS
+
+```html
+<ul>
+<li id="one" cl ass=" cool ">
+<em>fresh</em> figs</li>
+<li id="two" class="hot">pine nuts~/li>
+<l i id="three" cl ass=" cool ">honey</l i>
+<l i id="four">bal samic vi negar</l i>
+</ul>
+```
