@@ -1,5 +1,7 @@
 # Cascading Style Sheet (CSS)
 ## Layout
+![layout](https://miro.medium.com/max/1024/1*XCZZZmhQN4rHLw2dW14BZQ.png)
+
 ### Normal Flow position:static
 ##### In normal flow, each block-level element sits on top of the next one. Since this is the default way in which browsers treat HTML elements, you do not need a CSS property to indicate that elements should appear in normal flow, but the syntax would be: position: static; I have not specified a width property for the heading element, so you can see how it stretches the width of the entire browser window by default. The paragraphs are restricted to 450 pixels wide. This shows how the elements in normal flow start on a new line even if they do not take up the full width of the browser window. 
 
