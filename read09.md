@@ -68,25 +68,119 @@ maxlength="30" />
 ```
 
 
+## Image For Bullets list-style-image
+##### You can specify an image to act as a bullet point using the list-style-image property. The value starts with the letters url and is followed by a pair of parentheses. Inside the parentheses, the path to the image is given inside double quotes. This property can be used on rules that apply to the \<ul> and \<li> elements. The example on this page also shows the use of the margin property to increase the vertical gap between each item in the list.
 
+## HTML:
+```html
+<h1>Index of Translated Poems</h1>
+<h2>Arthur Rimbaud</h2>
+<ul>
+<li>Ophelia</li>
+<li>To Music</li>
+<li>A Dream for Winter</li>
+<li>Vowels</li>
+<li>The Drunken Boat</li>
+</ul>
 
+```
 
+## CSS
+```html
+ul {
+list-style-image: url("images/star.png");}
+li {
+margin: 10px 0px 0px 0px;}
 
+```
 
+## Table Properties
+##### You have already met several properties that are commonly used with tables. Here we will put them together in a single example using the following: 
+- width: to set the width of the table.
+- padding: to set the space between the border of each table cell and its content.
+-  text-transform to convert the content of the table headers to uppercase
+-  letter-spacing, font-size to add additional styling to the content of the table headers.
+-  border-top, border-bottom to set borders above and below the table headers.
+-  text-align to align the writing to the left of some table cells and to the right of the others.
+-  background-color to change the background color of the alternating table rows.
+-  hover to highlight a table row when a user's mouse goes over it.
 
+```html
+<h1>First Edition Auctions</h1>
+<table>
+<tr>
+<th>Author</th>
+<th>Title</th>
+<th class="money">Reserve Price</th>
+<th class="money">Current Bid</th>
+</tr>
+<tr>
+<td>E.E. Cummings</td>
+<td>Tulips & Chimneys</td>
+<td class="money">$2,000.00</td>
+<td class="money">$2,642.50</td>
+</tr>
+<tr class="even">
+<td>Charles d'Orleans</td>
+<td>Poemes</td>
+<td class="money"></td>
+<td class="money">$5,866.00</td>
+</tr>
+<tr>
+<td>T.S. Eliot</td>
+<td>Poems 1909 - 1925</td>
+<td class="money">$1,250.00</td>
+<td class="money">$8,499.35</td>
+</tr>
+<tr class="even">
+<td>Sylvia Plath</td>
+<td>The Colossus</td>
+<td class="money"></td>
+<td class="money">$1031.72</td>
+</tr>
+</table>
 
-# Lists, Tables & Forms
-
-
-
-
-
-
-
-
-
-
+```
 
 
 
 # Events
+
+## USING DOM EVENT HANDLERS
+##### the event handler appears on the last line of the JavaScript. Before the DOM event handler, two things are put in place: 
+1. If you use a named function when the event fires on your chosen DOM node, write that function first. (You could also use an anonymous function).
+2. The DOM element node is stored in a variable. Here the text input (whose id attribute has a va lue of username) is placed into a variable called e 1 Username.
+3. On the last line of the code sample above, the event handler e 1 Username. 
+
+##### This is followed by an equal sign, then the name of the function that will run when the event fires on that element. Note that there are no parentheses on the function name. This means you cannot pass arguments to this function. The HTML is the same, but without the onb 1 ur event attribute. This means that. the event handler is in the JavaScript, not the HTML. Browser support: On line 3, the checkUsername() function uses the this keyword in the conditional statement to check the number of characters the user entered. It works in most browsers because they know this refers to the element the event happened on. However, in Internet Explorer 8 or earlier, IE would treat this as the wi ndow object. As a result, it would not know which element the event occurred on and there would be no value bthat it checked the length of, soit would raise an error.
+
+```html
+function checkUsername() {
+var elMsg = document .get El ementByld('feedback');
+if (this .value .l ength< 5) {
+elMsg . textContent 'Username mus t be 5 charact ers
+else {
+elMsg.textContent = '';
+@) var elUsername = document. getElementByld('username') ; II Get username input
+G) elUsername.onblur = checkUsername; II When it l oses focus call checkuserName()
+```
+
+
+## USING EVENT LISTENERS
+
+##### the event listener appears on the last line of the JavaScript. Before you write an event listener, two things are put in place: 
+1. If you use a named function when the event fi res on your chosen DOM node, write that function first. (You could also use an anonymous function.)
+2. The DOM element node(s) is stored in a variable. Here the text input (whose id attribute has a value of username) is placed into a variable called el Username.
+
+```html
+function chec kUsername( ) {
+var elMsg = document .get ElementByld('feedback');
+i f (t hi s .value.length< 5) {
+elMsg .text Content 'Username must be 5 characters
+else {
+el Msg .textContent I I, ,
+~ var elUsername = document .get El ementByld(' username') ; II Get username i nput
+II When i t loses focus call checkUsername()
+elUsername.addEventlistener('blur' , checkUsername , false) ;
+```
+
